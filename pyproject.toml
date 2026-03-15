@@ -16,6 +16,7 @@ databases = "^0.6.1"
 asyncpg = "^0.26.0"
 psycopg2-binary = "^2.9.3"
 aiosql = "^6.2"
+setuptools = ">=58.0,<81"
 pypika = "^0.48.9"
 alembic = "^1.8"
 python-slugify = "^6.1"
@@ -23,6 +24,7 @@ Unidecode = "^1.3"
 loguru = "^0.6.0"
 
 [tool.poetry.dev-dependencies]
+setuptools = ">=58.0,<81"
 black = "^22.6.0"
 isort = "^5.10"
 autoflake = "^1.4"
@@ -44,7 +46,10 @@ combine_as_imports = true
 
 [tool.pytest.ini_options]
 testpaths = "tests"
-filterwarnings = "error"
+filterwarnings = [
+  "error",
+  "ignore:pkg_resources is deprecated as an API:UserWarning",
+]
 addopts = '''
   --strict-markers
   --tb=short

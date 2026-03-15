@@ -10,14 +10,14 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY poetry.lock pyproject.toml ./
-RUN pip install --no-cache-dir "poetry>=1.1,<1.2" "poetry-core<1.1" setuptools && \
+RUN pip install --no-cache-dir "poetry==1.8.5" "setuptools<81" && \
     poetry config virtualenvs.in-project true
 
 # --- Production stage ---
 FROM base AS production
 
-RUN poetry install --no-dev && \
-    poetry run pip install --no-cache-dir "setuptools<67.5"
+RUN poetry install --without dev && \
+    poetry run pip install --no-cache-dir "setuptools<81"
 
 COPY . ./
 
@@ -30,7 +30,7 @@ CMD poetry run alembic upgrade head && \
 FROM base AS test
 
 RUN poetry install && \
-    poetry run pip install --no-cache-dir "setuptools<67.5"
+    poetry run pip install --no-cache-dir "setuptools<81"
 
 COPY . ./
 
