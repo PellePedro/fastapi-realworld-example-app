@@ -38,6 +38,9 @@ def test_health_get():
 
     # Generated Assertions
     assert skyramp.check_status_code(health_GET_response, "20x")
+    assert skyramp.get_response_value(health_GET_response, "status") is not None
+    assert skyramp.get_response_value(health_GET_response, "version") is not None
+    assert skyramp.get_response_value(health_GET_response, "environment") is not None
 
 
 if __name__ == "__main__":
