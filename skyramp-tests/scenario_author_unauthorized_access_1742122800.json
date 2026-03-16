@@ -1,0 +1,80 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"author\": {\"specialty\": \"Unauthorized Test\", \"location\": \"Nowhere\", \"website\": \"https://test.example.com\"}}",
+    "ResponseBody": "{\"detail\": \"Authentication credentials were not provided.\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 403,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:56:04.557Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"author\": {\"specialty\": \"Unauthorized Update\", \"location\": \"Nowhere\", \"website\": \"https://test.example.com\"}}",
+    "ResponseBody": "{\"detail\": \"Authentication credentials were not provided.\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PUT",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 403,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:56:13.432Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": \"Authentication credentials were not provided.\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 403,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:56:21.060Z",
+    "Scheme": "http"
+  }
+]
