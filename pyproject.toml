@@ -38,6 +38,7 @@ pytest-env = "^0.6.2"
 pytest-xdist = "^2.4.0"
 httpx = "^0.23.0"
 asgi-lifespan = "^1.0.1"
+skyramp = "*"
 
 [tool.isort]
 profile = "black"
