@@ -68,6 +68,18 @@ class Favorites(TypedTable):
     user_id: int
 
 
+class Notifications(TypedTable):
+    __table__ = "notifications"
+
+    id: int
+    user_id: int
+    type: str
+    message: str
+    is_read: bool
+    created_at: datetime
+    updated_at: datetime
+
+
 users = Users()
 articles = Articles()
 tags = Tags()
