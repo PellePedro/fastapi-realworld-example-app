@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.routes import authentication, comments, profiles, tags, users
+from app.api.routes import authentication, categories, comments, profiles, tags, users
 from app.api.routes.articles import api as articles
 
 router = APIRouter()
@@ -14,3 +14,4 @@ router.include_router(
     prefix="/articles/{slug}/comments",
 )
 router.include_router(tags.router, tags=["tags"], prefix="/tags")
+router.include_router(categories.router, tags=["categories"], prefix="/categories")

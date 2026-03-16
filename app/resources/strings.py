@@ -22,4 +22,6 @@ ARTICLE_IS_NOT_FAVORITED = "article is not favorited"
 
 COMMENT_DOES_NOT_EXIST = "comment does not exist"
 
+CATEGORY_DOES_NOT_EXIST_ERROR = "category does not exist"
+
 AUTHENTICATION_REQUIRED = "authentication required"
