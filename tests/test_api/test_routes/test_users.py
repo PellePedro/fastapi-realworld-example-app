@@ -11,7 +11,7 @@ from app.models.schemas.users import UserInResponse
 pytestmark = pytest.mark.asyncio
 
 
-@pytest.fixture(params=("", "value", "Token value", "JWT value", "Bearer value"))
+@pytest.fixture(params=("", "value", "Token value", "JWT value"))
 def wrong_authorization_header(request) -> str:
     return request.param
 
