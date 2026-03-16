@@ -48,7 +48,7 @@ class BookmarksRepository(BaseRepository):
             article_slug=article_slug,
             article_title=article_title,
             note=note,
-            created_at=row["created_at"],
+            created_at=row,
         )
 
     async def delete_bookmark(self, *, user_id: int, article_id: int) -> None:
