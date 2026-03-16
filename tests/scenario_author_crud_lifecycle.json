@@ -1,0 +1,158 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"username\": \"testauthor1\", \"email\": \"testauthor1@example.com\", \"password\": \"Test1234!\"}}",
+    "ResponseBody": "{\"user\": {\"id\": 1, \"username\": \"testauthor1\", \"email\": \"testauthor1@example.com\", \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.test\", \"bio\": \"\", \"image\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:04:14.004Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"email\": \"testauthor1@example.com\", \"password\": \"Test1234!\"}}",
+    "ResponseBody": "{\"user\": {\"username\": \"testauthor1\", \"email\": \"testauthor1@example.com\", \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.test\", \"bio\": \"\", \"image\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users/login",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:04:18.471Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"author\": {\"specialty\": \"Python Development\", \"location\": \"New York\", \"website\": \"https://testauthor.example.com\"}}",
+    "ResponseBody": "{\"author\": {\"id\": 1, \"user_id\": 1, \"username\": \"testauthor1\", \"specialty\": \"Python Development\", \"location\": \"New York\", \"website\": \"https://testauthor.example.com\", \"created_at\": \"2026-03-16T16:04:00Z\", \"updated_at\": \"2026-03-16T16:04:00Z\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:04:24.667Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"author\": {\"id\": 1, \"user_id\": 1, \"username\": \"testauthor1\", \"specialty\": \"Python Development\", \"location\": \"New York\", \"website\": \"https://testauthor.example.com\", \"created_at\": \"2026-03-16T16:04:00Z\", \"updated_at\": \"2026-03-16T16:04:00Z\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/authors/testauthor1",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:04:28.905Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"author\": {\"specialty\": \"FastAPI Expert\", \"location\": \"San Francisco\", \"website\": \"https://fastapi-expert.example.com\"}}",
+    "ResponseBody": "{\"author\": {\"id\": 1, \"user_id\": 1, \"username\": \"testauthor1\", \"specialty\": \"FastAPI Expert\", \"location\": \"San Francisco\", \"website\": \"https://fastapi-expert.example.com\", \"created_at\": \"2026-03-16T16:04:00Z\", \"updated_at\": \"2026-03-16T16:04:30Z\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PUT",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:04:33.529Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 204,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:04:37.032Z",
+    "Scheme": "http"
+  }
+]
