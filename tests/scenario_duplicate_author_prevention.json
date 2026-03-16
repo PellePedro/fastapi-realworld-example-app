@@ -1,0 +1,106 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"email\": \"dupauthor@example.com\", \"password\": \"Test1234!\", \"username\": \"dupauthor\"}}",
+    "ResponseBody": "{\"user\": {\"id\": 2, \"username\": \"dupauthor\", \"email\": \"dupauthor@example.com\", \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.test\", \"bio\": \"\", \"image\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:42:29.770Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"email\": \"dupauthor@example.com\", \"password\": \"Test1234!\"}}",
+    "ResponseBody": "{\"user\": {\"username\": \"dupauthor\", \"email\": \"dupauthor@example.com\", \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.test\", \"bio\": \"\", \"image\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users/login",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:42:40.929Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"author\": {\"specialty\": \"Python Development\", \"location\": \"New York\", \"website\": \"https://dupauthor.example.com\"}}",
+    "ResponseBody": "{\"author\": {\"id\": 2, \"user_id\": 2, \"username\": \"dupauthor\", \"specialty\": \"Python Development\", \"location\": \"New York\", \"website\": \"https://dupauthor.example.com\", \"created_at\": \"2026-03-16T16:42:00Z\", \"updated_at\": \"2026-03-16T16:42:00Z\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:42:45.721Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"author\": {\"specialty\": \"Django Developer\", \"location\": \"Chicago\", \"website\": \"https://duplicate.example.com\"}}",
+    "ResponseBody": "{\"detail\": \"Author already exists for this user.\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 400,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T16:42:51.721Z",
+    "Scheme": "http"
+  }
+]
