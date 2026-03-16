@@ -8,11 +8,13 @@ from app.models.domain.authors import Author
 
 class AuthorsRepository(BaseRepository):
     async def get_all_authors(self) -> List[Author]:
-        author_rows = await queries.get_all_authors(self.connection)
+        author_rows = await queries.get_all_authors(  # type: ignore
+            self.connection,
+        )
         return [Author(**row) for row in author_rows]
 
     async def get_author_by_username(self, *, username: str) -> Author:
-        author_row = await queries.get_author_by_username(
+        author_row = await queries.get_author_by_username(  # type: ignore
             self.connection,
             username=username,
         )
@@ -32,7 +34,7 @@ class AuthorsRepository(BaseRepository):
         website: str = "",
     ) -> Author:
         async with self.connection.transaction():
-            author_row = await queries.create_new_author(
+            author_row = await queries.create_new_author(  # type: ignore
                 self.connection,
                 user_id=user_id,
                 specialty=specialty,
@@ -41,7 +43,7 @@ class AuthorsRepository(BaseRepository):
             )
 
         return Author(
-            id=author_row["id"],
+            id_=author_row["id"],
             user_id=user_id,
             username="",
             specialty=specialty,
@@ -66,7 +68,7 @@ class AuthorsRepository(BaseRepository):
         author.website = website if website is not None else author.website
 
         async with self.connection.transaction():
-            author.updated_at = await queries.update_author_by_user_id(
+            author.updated_at = await queries.update_author_by_user_id(  # type: ignore
                 self.connection,
                 user_id=user_id,
                 specialty=author.specialty,
@@ -77,11 +79,15 @@ class AuthorsRepository(BaseRepository):
         return author
 
     async def delete_author(self, *, user_id: int) -> None:
-        await queries.delete_author_by_user_id(self.connection, user_id=user_id)
+        await queries.delete_author_by_user_id(  # type: ignore
+            self.connection,
+            user_id=user_id,
+        )
 
     async def get_author_by_user_id(self, *, user_id: int) -> Author:
-        # Reuse the get-all query with a filter approach via direct SQL
-        author_rows = await queries.get_all_authors(self.connection)
+        author_rows = await queries.get_all_authors(  # type: ignore
+            self.connection,
+        )
         for row in author_rows:
             if row["user_id"] == user_id:
                 return Author(**row)
