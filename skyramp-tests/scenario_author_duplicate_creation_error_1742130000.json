@@ -1,0 +1,80 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"email\": \"dupauthor1742130000@example.com\", \"password\": \"Test1234!\", \"username\": \"dupauthor1742130000\"}}",
+    "ResponseBody": "{\"user\": {\"email\": \"dupauthor1742130000@example.com\", \"token\": \"string\", \"username\": \"dupauthor1742130000\", \"bio\": \"\", \"image\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T18:01:32.657Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"author\": {\"specialty\": \"Python Development\", \"location\": \"New York\", \"website\": \"https://dupauthor.example.com\"}}",
+    "ResponseBody": "{\"author\": {\"id\": 1, \"userId\": 1, \"username\": \"dupauthor1742130000\", \"specialty\": \"Python Development\", \"location\": \"New York\", \"website\": \"https://dupauthor.example.com\", \"createdAt\": \"2026-03-16T18:00:00Z\", \"updatedAt\": \"2026-03-16T18:00:00Z\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T18:01:39.393Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"author\": {\"specialty\": \"Machine Learning\", \"location\": \"San Francisco\", \"website\": \"https://dupauthor2.example.com\"}}",
+    "ResponseBody": "{\"detail\": \"Author already exists.\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 400,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T18:01:43.787Z",
+    "Scheme": "http"
+  }
+]

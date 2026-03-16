@@ -1,0 +1,158 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"email\": \"lifecycleauthor1742150000@example.com\", \"password\": \"Test1234!\", \"username\": \"lifecycleauthor1742150000\"}}",
+    "ResponseBody": "{\"user\": {\"email\": \"lifecycleauthor1742150000@example.com\", \"username\": \"lifecycleauthor1742150000\", \"token\": \"jwt_token_here\", \"bio\": \"\", \"image\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T17:47:08.237Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"email\": \"lifecycleauthor1742150000@example.com\", \"password\": \"Test1234!\"}}",
+    "ResponseBody": "{\"user\": {\"email\": \"lifecycleauthor1742150000@example.com\", \"username\": \"lifecycleauthor1742150000\", \"token\": \"jwt_token_here\", \"bio\": \"\", \"image\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users/login",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T17:47:15.487Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"author\": {\"specialty\": \"Python Development\", \"location\": \"New York\", \"website\": \"https://lifecycleauthor.example.com\"}}",
+    "ResponseBody": "{\"author\": {\"id\": 1, \"user_id\": 1, \"username\": \"lifecycleauthor1742150000\", \"specialty\": \"Python Development\", \"location\": \"New York\", \"website\": \"https://lifecycleauthor.example.com\", \"created_at\": \"2026-03-16T17:47:00Z\", \"updated_at\": \"2026-03-16T17:47:00Z\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T17:47:21.360Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"author\": {\"specialty\": \"FastAPI & Async Python\", \"location\": \"San Francisco\", \"website\": \"https://updated-lifecycleauthor.example.com\"}}",
+    "ResponseBody": "{\"author\": {\"id\": 1, \"user_id\": 1, \"username\": \"lifecycleauthor1742150000\", \"specialty\": \"FastAPI & Async Python\", \"location\": \"San Francisco\", \"website\": \"https://updated-lifecycleauthor.example.com\", \"created_at\": \"2026-03-16T17:47:00Z\", \"updated_at\": \"2026-03-16T17:47:30Z\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PUT",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T17:47:26.150Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"author\": {\"id\": 1, \"user_id\": 1, \"username\": \"lifecycleauthor1742150000\", \"specialty\": \"FastAPI & Async Python\", \"location\": \"San Francisco\", \"website\": \"https://updated-lifecycleauthor.example.com\", \"created_at\": \"2026-03-16T17:47:00Z\", \"updated_at\": \"2026-03-16T17:47:30Z\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/authors/lifecycleauthor1742150000",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T17:47:30.383Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 204,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T17:47:34.131Z",
+    "Scheme": "http"
+  }
+]

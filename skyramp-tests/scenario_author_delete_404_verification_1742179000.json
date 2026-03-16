@@ -1,0 +1,158 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"email\": \"delete404user1742179000@example.com\", \"password\": \"Test1234!\", \"username\": \"delete404user1742179000\"}}",
+    "ResponseBody": "{\"user\": {\"email\": \"delete404user1742179000@example.com\", \"username\": \"delete404user1742179000\", \"token\": \"jwt_token_here\", \"bio\": \"\", \"image\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T18:57:12.347Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"user\": {\"email\": \"delete404user1742179000@example.com\", \"password\": \"Test1234!\"}}",
+    "ResponseBody": "{\"user\": {\"email\": \"delete404user1742179000@example.com\", \"username\": \"delete404user1742179000\", \"token\": \"jwt_token_here\", \"bio\": \"\", \"image\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/users/login",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T18:57:17.150Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"author\": {\"specialty\": \"Python Development\", \"location\": \"New York\", \"website\": \"https://delete404user.example.com\"}}",
+    "ResponseBody": "{\"author\": {\"id\": 1, \"user_id\": 1, \"username\": \"delete404user1742179000\", \"specialty\": \"Python Development\", \"location\": \"New York\", \"website\": \"https://delete404user.example.com\", \"created_at\": \"2026-03-16T18:57:00Z\", \"updated_at\": \"2026-03-16T18:57:00Z\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T18:57:22.620Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"author\": {\"id\": 1, \"user_id\": 1, \"username\": \"delete404user1742179000\", \"specialty\": \"Python Development\", \"location\": \"New York\", \"website\": \"https://delete404user.example.com\", \"created_at\": \"2026-03-16T18:57:00Z\", \"updated_at\": \"2026-03-16T18:57:00Z\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/authors/delete404user1742179000",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T18:57:27.308Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/authors",
+    "QueryParams": {},
+    "StatusCode": 204,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T18:57:31.317Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": \"author does not exist\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/authors/delete404user1742179000",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 8000,
+    "Timestamp": "2026-03-16T18:57:35.573Z",
+    "Scheme": "http"
+  }
+]
