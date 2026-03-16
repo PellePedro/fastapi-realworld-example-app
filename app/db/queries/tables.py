@@ -68,7 +68,20 @@ class Favorites(TypedTable):
     user_id: int
 
 
+class Authors(TypedTable):
+    __table__ = "authors"
+
+    id: int
+    user_id: int
+    specialty: str
+    location: str
+    website: str
+    created_at: datetime
+    updated_at: datetime
+
+
 users = Users()
+authors = Authors()
 articles = Articles()
 tags = Tags()
 articles_to_tags = ArticlesToTags()
