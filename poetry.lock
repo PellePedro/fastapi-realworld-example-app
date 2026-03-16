@@ -1771,18 +1771,6 @@ idna = {version = "*", optional = true, markers = "extra == \"idna2008\""}
 idna2008 = ["idna"]
 
 [[package]]
-name = "robotframework"
-version = "7.0"
-description = "Generic automation framework for acceptance testing and robotic process automation (RPA)"
-optional = false
-python-versions = ">=3.8"
-groups = ["dev"]
-files = [
-    {file = "robotframework-7.0-py3-none-any.whl", hash = "sha256:865f427c4e4ec8c0b71a24dedbdad6668adfecc9fce04d77d02e1b8e54b77f41"},
-    {file = "robotframework-7.0.zip", hash = "sha256:04623f758346c917db182e17591ffa474090560c02ed5a64343902e72b7b4bd5"},
-]
-
-[[package]]
 name = "setuptools"
 version = "80.10.2"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
@@ -1814,23 +1802,6 @@ files = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
-
-[[package]]
-name = "skyramp"
-version = "0.4.83"
-description = "module for leveraging skyramp cli functionality"
-optional = false
-python-versions = ">=3.0"
-groups = ["dev"]
-files = [
-    {file = "skyramp-0.4.83-py3-none-any.whl", hash = "sha256:d76b6b9866f11bb61cd23e7d1657a49e165c4280b1ac2f496688c031906cbff6"},
-    {file = "skyramp-0.4.83.tar.gz", hash = "sha256:1aea7de255d4660908b7c20bae96137a304293a0714806577f8aaf90d02931ab"},
-]
-
-[package.dependencies]
-pyyaml = ">=6.0.0"
-robotframework = "7.0.0"
-typing_extensions = ">=4.9.0"
 
 [[package]]
 name = "smmap"
@@ -2108,4 +2079,4 @@ dev = ["black (>=19.3b0) ; python_version >= \"3.6\"", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.9"
-content-hash = "4063f3eee737d9fcdf3dd61e9909f1f72068f5ee60c945aa7b9b4127f6106c9d"
+content-hash = "1f987b3f96bf831f04e9c2aa9f56b858571b2644157fa7e4219ee8aa93a29d3c"
