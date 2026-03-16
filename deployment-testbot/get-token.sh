@@ -30,4 +30,4 @@ if [ -z "$TOKEN" ]; then
   exit 1
 fi
 
-echo "Bearer $TOKEN"
+echo "$TOKEN"
