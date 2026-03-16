@@ -112,7 +112,7 @@ jobs:
           github_token: ${{ steps.app-token.outputs.token }}
           skyramp_mcp_version: next
           skyramp_executor_version: v1.3.13
-          auth_token_command: "echo ${{ secrets.SKYRAMP_TEST_TOKEN }}"
+          auth_token_command: "./deployment-testbot/get-token.sh"
           target_setup_command: "./deployment-testbot/setup.sh"
 
           test_directory: "skyramp-tests"
