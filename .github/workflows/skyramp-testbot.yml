@@ -5,77 +5,77 @@ on:
     types: [opened, synchronize, reopened]
     paths:
       # Common source directories
-      - 'src/**'
-      - 'app/**'
-      - 'lib/**'
-      - 'api/**'
-      - 'server/**'
-      - 'backend/**'
-      - 'frontend/**'
-      - 'web/**'
-      - 'core/**'
+      - "src/**"
+      - "app/**"
+      - "lib/**"
+      - "api/**"
+      - "server/**"
+      - "backend/**"
+      - "frontend/**"
+      - "web/**"
+      - "core/**"
       # Monorepo patterns
-      - 'packages/**'
-      - 'apps/**'
-      - 'services/**'
+      - "packages/**"
+      - "apps/**"
+      - "services/**"
       # Go conventions
-      - 'cmd/**'
-      - 'pkg/**'
-      - 'internal/**'
+      - "cmd/**"
+      - "pkg/**"
+      - "internal/**"
       # Rust workspaces
-      - 'crates/**'
+      - "crates/**"
       # Serverless
-      - 'functions/**'
+      - "functions/**"
       # Frontend framework conventions
-      - 'pages/**'
-      - 'components/**'
+      - "pages/**"
+      - "components/**"
       # Ruby/Rails
-      - 'db/**'
-      - 'config/**'
+      - "db/**"
+      - "config/**"
       # Common web patterns
-      - 'routes/**'
-      - 'controllers/**'
-      - 'models/**'
-      - 'views/**'
-      - 'handlers/**'
-      - 'middleware/**'
+      - "routes/**"
+      - "controllers/**"
+      - "models/**"
+      - "views/**"
+      - "handlers/**"
+      - "middleware/**"
       # Tests
-      - 'tests/**'
-      - 'test/**'
-      - 'spec/**'
+      - "tests/**"
+      - "test/**"
+      - "spec/**"
       # Build and dependency files
-      - 'package.json'
-      - 'package-lock.json'
-      - 'yarn.lock'
-      - 'pnpm-lock.yaml'
-      - 'pyproject.toml'
-      - 'setup.py'
-      - 'setup.cfg'
-      - 'requirements*.txt'
-      - 'Pipfile'
-      - 'poetry.lock'
-      - 'go.mod'
-      - 'go.sum'
-      - 'Cargo.toml'
-      - 'Cargo.lock'
-      - 'pom.xml'
-      - 'build.gradle'
-      - 'build.gradle.kts'
-      - 'Gemfile'
-      - 'Gemfile.lock'
-      - '*.csproj'
-      - '*.sln'
-      - 'Dockerfile'
-      - 'docker-compose.yml'
-      - 'docker-compose.yaml'
+      - "package.json"
+      - "package-lock.json"
+      - "yarn.lock"
+      - "pnpm-lock.yaml"
+      - "pyproject.toml"
+      - "setup.py"
+      - "setup.cfg"
+      - "requirements*.txt"
+      - "Pipfile"
+      - "poetry.lock"
+      - "go.mod"
+      - "go.sum"
+      - "Cargo.toml"
+      - "Cargo.lock"
+      - "pom.xml"
+      - "build.gradle"
+      - "build.gradle.kts"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - "*.csproj"
+      - "*.sln"
+      - "Dockerfile"
+      - "docker-compose.yml"
+      - "docker-compose.yaml"
   workflow_dispatch:
     inputs:
       pr_number:
-        description: 'PR number to run testbot on (used by retrigger)'
+        description: "PR number to run testbot on (used by retrigger)"
         required: false
         type: string
       selected_tests:
-        description: 'JSON array of selected tests from PR comment checkboxes'
+        description: "JSON array of selected tests from PR comment checkboxes"
         required: false
         type: string
 
@@ -110,5 +110,12 @@ jobs:
           skyramp_license_file: ${{ secrets.SKYRAMP_LICENSE_FILE }}
           anthropic_api_key: ${{ secrets.SKYRAMP_TESTBOT_API_KEY }}
           github_token: ${{ steps.app-token.outputs.token }}
-          auth_token_command: 'echo ${{ secrets.SKYRAMP_TEST_TOKEN }}'
-          target_setup_command: './deployment-testbot/setup.sh'
+          auth_token_command: "echo ${{ secrets.SKYRAMP_TEST_TOKEN }}"
+          target_setup_command: "./deployment-testbot/setup.sh"
+
+          test_directory: "skyramp-tests"
+          auto_commit: true
+          post_pr_comment: true
+          enable_debug: true
+          commit_message: "TestBot: update tests"
+          skyramp_mcp_version: next
