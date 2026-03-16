@@ -22,4 +22,7 @@ ARTICLE_IS_NOT_FAVORITED = "article is not favorited"
 
 COMMENT_DOES_NOT_EXIST = "comment does not exist"
 
+BOOKMARK_ALREADY_EXISTS = "article is already bookmarked"
+BOOKMARK_DOES_NOT_EXIST_ERROR = "bookmark does not exist"
+
 AUTHENTICATION_REQUIRED = "authentication required"
