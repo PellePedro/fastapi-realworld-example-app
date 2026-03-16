@@ -1,5 +1,10 @@
 from fastapi import APIRouter, Body, Depends, HTTPException
-from starlette.status import HTTP_201_CREATED, HTTP_204_NO_CONTENT, HTTP_400_BAD_REQUEST
+from starlette.status import (
+    HTTP_201_CREATED,
+    HTTP_204_NO_CONTENT,
+    HTTP_400_BAD_REQUEST,
+    HTTP_404_NOT_FOUND,
+)
 
 from app.api.dependencies.authentication import get_current_user_authorizer
 from app.api.dependencies.database import get_repository
@@ -25,7 +30,7 @@ async def list_authors(
 ) -> ListOfAuthorsInResponse:
     authors = await authors_repo.get_all_authors()
     return ListOfAuthorsInResponse(
-        authors=[AuthorForResponse.from_orm(a) for a in authors],
+        authors=[AuthorForResponse.from_orm(author) for author in authors],
         authors_count=len(authors),
     )
 
@@ -43,7 +48,7 @@ async def get_author(
         author = await authors_repo.get_author_by_username(username=username)
     except EntityDoesNotExist:
         raise HTTPException(
-            status_code=404,
+            status_code=HTTP_404_NOT_FOUND,
             detail=strings.AUTHOR_DOES_NOT_EXIST_ERROR,
         )
 
@@ -66,11 +71,13 @@ async def create_author(
         username=current_user.username,
     )
 
+    author_exists = True
     try:
         await authors_repo.get_author_by_user_id(user_id=user_in_db.id_)
     except EntityDoesNotExist:
-        pass
-    else:
+        author_exists = False
+
+    if author_exists:
         raise HTTPException(
             status_code=HTTP_400_BAD_REQUEST,
             detail=strings.AUTHOR_ALREADY_EXISTS,
@@ -109,7 +116,7 @@ async def update_author(
         )
     except EntityDoesNotExist:
         raise HTTPException(
-            status_code=404,
+            status_code=HTTP_404_NOT_FOUND,
             detail=strings.AUTHOR_DOES_NOT_EXIST_ERROR,
         )
 
@@ -134,7 +141,7 @@ async def delete_author(
         await authors_repo.get_author_by_user_id(user_id=user_in_db.id_)
     except EntityDoesNotExist:
         raise HTTPException(
-            status_code=404,
+            status_code=HTTP_404_NOT_FOUND,
             detail=strings.AUTHOR_DOES_NOT_EXIST_ERROR,
         )
 

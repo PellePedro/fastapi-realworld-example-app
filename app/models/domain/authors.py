@@ -1,5 +1,3 @@
-from typing import Optional
-
 from app.models.common import DateTimeModelMixin, IDModelMixin
 from app.models.domain.rwmodel import RWModel
 

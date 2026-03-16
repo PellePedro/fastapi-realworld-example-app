@@ -5,7 +5,7 @@ from app.models.schemas.rwschema import RWSchema
 
 
 class AuthorForResponse(RWSchema, Author):
-    pass
+    """Author schema for API responses."""
 
 
 class AuthorInResponse(RWSchema):
