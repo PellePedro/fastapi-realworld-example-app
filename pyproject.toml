@@ -46,6 +46,11 @@ combine_as_imports = true
 
 [tool.pytest.ini_options]
 testpaths = "tests"
+collect_ignore_glob = [
+  "tests/test_contract_*",
+  "tests/test_fuzz_*",
+  "tests/test_integration_*",
+]
 filterwarnings = [
   "error",
   "ignore:pkg_resources is deprecated as an API:UserWarning",

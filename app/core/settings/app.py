@@ -26,7 +26,7 @@ class AppSettings(BaseAppSettings):
 
     api_prefix: str = "/api"
 
-    jwt_token_prefix: str = "Token"
+    jwt_token_prefix: str = "Bearer"
 
     allowed_hosts: List[str] = ["*"]
 
